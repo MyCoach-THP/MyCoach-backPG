@@ -81,6 +81,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: mysite_production
+  database: mysite_1wig
   username: mysite
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
