@@ -43,8 +43,8 @@ class CartController < ApplicationController
       payment_method_types: ['card'],
       line_items: cart_items,
       mode: 'payment',
-      success_url: 'http://localhost:5173/success', 
-      cancel_url: 'http://localhost:5173/cancel' 
+      success_url: 'https://mycoachthp.netlify.app/success', 
+      cancel_url: 'https://mycoachthp.netlify.app/cancel' 
     )
     render json: { session_id: session.id, payment_success: true } 
   end
