@@ -48,5 +48,6 @@ Rails.application.routes.draw do
   scope controller: :checkout do
     get 'api/payment/status', action: :payment_status
   end
+post 'api/seed_database', to: 'seed#seed_database'
 
 end
