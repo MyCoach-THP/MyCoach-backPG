@@ -13,4 +13,11 @@ class UserMailer < ApplicationMailer
       mail(to: @user.email, subject: 'Réinitialisation de votre mot de passe')
   end
 
+  def notify_coach_of_purchase(coach, client, training_plan)
+    @coach = coach
+    @client = client
+    @training_plan = training_plan
+    mail(to: @coach.email, subject: "Un de vos plans d'entraînement a été acheté !")
+  end
+
 end
