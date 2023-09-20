@@ -3,10 +3,13 @@
   <h1>Félicitation</h1>
   <p>Vous avez vendu le plan d'entrainement suivant:</p>
   <h2><%= @training_plan.name %></h2>
-  <p>Le paiment est confirmé!</p>
+  <h3>Le paiment est confirmé!</h3>
+  <p>L'adresse email de l'acheteur: <%= @client.email %></p>
+  <p>N'hesitez pas à le contacter pour le remercier, ou pour lui proposer un suivit personnalisé!</p>
+  <p>Rappel: Vous pouvez mettre ce service en vente par l'intermediaire de votre Dashboard.</p>
   <p>A trés bientôt!</p>
-  <br><br>
-  <a href=" https://mycoach.fly.dev/users/sign_in" class="button">Allez sur le site MyCoach</a>
-  <br><br><br><br>
+  
+  <a href=" https://mycoach.fly.dev/users/sign_in" class="button">Aller sur le site MyCoach</a>
+  <br>
   <img class="logo" src="https://res.cloudinary.com/dmq3cpw6u/image/upload/v1694423361/logoMC_uv40go.png">
 </div>
