@@ -6,7 +6,7 @@ class PasswordResetsController < ApplicationController
       user.generate_password_reset_token!
       
       # Configurez votre URL de base ici
-      frontend_url = "http://localhost:5173"
+      frontend_url = "https://mycoachthp.netlify.app"
       
       # Générez le chemin complet
       reset_password_path = "/resetpassword/#{user.reset_password_token}"
