@@ -46,9 +46,9 @@ class TrainingPlansController < ApplicationController
     
     if @training_plan.coach == current_user  # Assurez-vous que l'utilisateur actuel est le coach
       @training_plan.destroy
-      render json: { message: 'Training plan deleted successfully' }, status: :ok
+      render json: { message: 'Plan éffacé avec succes' }, status: :ok
     else
-      render json: { error: 'Unauthorized' }, status: :unauthorized
+      render json: { error: 'non autorisé' }, status: :unauthorized
     end
   end
 
@@ -59,7 +59,7 @@ class TrainingPlansController < ApplicationController
       purchased_plans = current_user.user_training_plans.where(purchased: true).map(&:training_plan)
       render json: purchased_plans
     else
-      render json: { error: 'Non-authenticated' }, status: :unauthorized
+      render json: { error: 'Non-autentifié' }, status: :unauthorized
     end
   end
 

@@ -15,9 +15,9 @@ class PasswordResetsController < ApplicationController
       # Envoyez le courrier électronique (Assurez-vous de passer l'URL complète à votre mailer)
       UserMailer.with(reset_password_url: reset_password_url).password_reset(user).deliver_now
       
-      render json: { message: 'Email sent' }, status: :ok
+      render json: { message: 'Email envoyé' }, status: :ok
     else
-      render json: { errors: 'Email not found' }, status: :unprocessable_entity
+      render json: { errors: 'Email introuvable' }, status: :unprocessable_entity
     end
   end
 

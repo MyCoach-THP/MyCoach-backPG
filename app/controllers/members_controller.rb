@@ -6,7 +6,7 @@ class MembersController < ApplicationController
     def show
       user = get_user_from_token
       render json: {
-        message: "If you see this, you're in!",
+        message: "Vous êtes connecté",
         user: user
       }
     end

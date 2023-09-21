@@ -12,9 +12,9 @@ class ProfilesController < ApplicationController
         current_user.image_url = url_for(current_user.image)
         current_user.save
       end
-      render json: { message: 'Profile updated successfully.', user: current_user }, status: :ok
+      render json: { message: 'Profile mis à jour avec succes.', user: current_user }, status: :ok
     else
-      render json: { message: 'Something went wrong.' }, status: :unprocessable_entity
+      render json: { message: 'Il y a eu un probleme...' }, status: :unprocessable_entity
     end
   end
 

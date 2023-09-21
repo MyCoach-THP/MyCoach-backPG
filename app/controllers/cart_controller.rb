@@ -56,7 +56,7 @@ class CartController < ApplicationController
     cart_items.map do |item|
       {
         price_data: {
-          currency: 'usd',
+          currency: 'eur',
           product_data: {
             name: item.name,
           },
