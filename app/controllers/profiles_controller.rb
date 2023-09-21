@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_current_user, only: [:update, :coach, :purchase_history]
 
   def coaches
     @coaches = User.where(is_coach: true)
